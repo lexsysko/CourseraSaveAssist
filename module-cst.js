@@ -1,6 +1,6 @@
 //author= Mücahit Sahin
 //github=https://github.com/mucahit-sahin
-//author of fork with addons = lexxai
+//author of fork with addons = lexsysko
 //github=https://github.com/lexxai/coursera-subtitle-translate-extension
 
 window.browser = (function () {
