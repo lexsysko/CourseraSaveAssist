@@ -516,15 +516,42 @@ function tab_select_current_video_implode(params) {
       case "gradedLti":
         finding = "/gradedLti/";
         break;
+      case "assignmentSubmission":
+        finding = "/assignment-submission/";
+        break;
     }
     //console.log(`It page analyseURL - ${finding} ${loc.pathname} : ${loc.pathname.includes(finding)}`);
     return finding ? loc.pathname.includes(finding) : false;
   }
 
   function isPageMarked(item) {
-    let obj = item?.closest(".rc-NavSingleItemDisplay");
-    let btn = obj.querySelector("div.rc-NavItemIcon > span.rc-TooltipWrapper");
-    result = btn === null;
+    if (!item) return false;
+    // Find the closest logical container (accordion item, list item, etc.)
+    let container =
+      item.closest('li, [role="listitem"], [class*="AccordionItem"], [class*="NavItem"]') ||
+      item.parentElement?.parentElement ||
+      item;
+
+    let aLink = container?.closest("a") || container?.querySelector("a");
+    if (aLink) {
+      let label = aLink.getAttribute("aria-label");
+      if (label) {
+        let lowerLabel = label.toLowerCase();
+        if (lowerLabel.includes("not submitted") || lowerLabel.includes("not completed")) {
+          return false;
+        }
+        if (lowerLabel.includes("completed") || lowerLabel.includes("submitted")) {
+          return true;
+        }
+      }
+    }
+
+    // Check for SVG icons indicating completion
+    let hasPath = container?.querySelector("svg path, svg polyline, svg polygon") !== null;
+    let rectFill = container?.querySelector("svg rect")?.getAttribute("fill");
+    let isFinishedColor = rectFill && !rectFill.includes("grey-50") && !rectFill.includes("gray-50");
+
+    let result = hasPath || isFinishedColor || false;
     console.log("isPageMarked", result);
     return result;
   }
@@ -532,16 +559,20 @@ function tab_select_current_video_implode(params) {
   async function isReadySkipPage() {
     let cont = 15;
     while (cont > 0) {
-      let btn = document.querySelectorAll("a.cds-button-disableElevation")[1];
-      if (btn) {
+      const nextBtn = document.querySelector(
+        'button[data-testid="next-item"], ' +
+          'button[aria-label*="next" i], ' +
+          'button.cds-button-disableElevation.cds-button-primary:not([data-testid="mark-complete"]):not([data-testid="CoverPageActionButton"]), ',
+      );
+      if (nextBtn) {
         setTimeout(() => {
-          console.log("It ready to skip this page click to ", btn);
-          btn.click();
+          console.log("It ready to skip this page click to ", nextBtn);
+          nextBtn.click();
           //btn.onclick.call(btn);
         }, 2000);
         break;
       } else {
-        console.log("It page a href not found :", btn, cont);
+        console.log("It page a href not found :", nextBtn, cont);
         await dcelay(1000, 1);
       }
       cont--;
@@ -554,8 +585,8 @@ function tab_select_current_video_implode(params) {
     } else {
       let cont = 15;
       while (cont > 0) {
-              let video = document.getElementsByTagName("video");
-      if (video) video=video[0];
+        let video = document.getElementsByTagName("video");
+        if (video) video = video[0];
         if (video && video.readyState > 0) {
           console.log("Can save your video", video);
           sendMessage("dosavevieo", document.title);
@@ -582,7 +613,7 @@ function tab_select_current_video_implode(params) {
     while (cont > 0) {
       let cst_state = check_cst_loaded();
       let video = document.getElementsByTagName("video");
-      if (video) video=video[0];
+      if (video) video = video[0];
       if (cst_state && video && video.readyState > 0) {
         translateVideo();
         break;
@@ -600,8 +631,8 @@ function tab_select_current_video_implode(params) {
     }
     let cont = 15;
     while (cont > 0) {
-            let video = document.getElementsByTagName("video");
-      if (video) video=video[0];
+      let video = document.getElementsByTagName("video");
+      if (video) video = video[0];
       if (video && video.readyState > 0) {
         setVideoPos(video);
         break;
@@ -618,20 +649,24 @@ function tab_select_current_video_implode(params) {
     }
     let cont = 15;
     while (cont > 0) {
-      let btn = document.querySelector('button.cds-button-disableElevation[type="submit"]');
-      if (btn) {
+      const completeBtn = document.querySelector('button[data-testid="mark-complete"]');
+      if (completeBtn) {
         setTimeout(() => {
-          console.log("It page click to ", btn);
-          btn.click();
+          console.log("It page click to ", completeBtn);
+          completeBtn.click();
           setTimeout(() => {
-            let btn = document.querySelector('button.cds-button-disableElevation[type="submit"]');
-            console.log("It page click to next", btn);
-            btn.click();
+            const nextBtn = document.querySelector(
+              'button[data-testid="next-item"], button[aria-label*="next" i], ' +
+                'button.cds-button-disableElevation.cds-button-primary:not([data-testid="mark-complete"]), ' +
+                'button.cds-button-disableElevation.cds-button-secondaryNeutral:not([data-testid="mark-complete"])',
+            );
+            console.log("It page click to next", nextBtn);
+            nextBtn.click();
           }, 6000);
         }, 2000);
         break;
       } else {
-        console.log("It page button not found :", btn, cont);
+        console.log("It page button not found :", completeBtn, cont);
         await dcelay(1000, 1);
       }
       cont--;
@@ -645,20 +680,24 @@ function tab_select_current_video_implode(params) {
     let cont = 15;
     while (cont > 0) {
       // rc - WidgetCompleteButton;
-      let btn = document.querySelector('button.mark-complete[type="button"]');
-      if (btn) {
+      const completeBtn = document.querySelector('button[data-testid="mark-complete"]');
+      if (completeBtn) {
         setTimeout(() => {
-          console.log("It page click to ", btn);
-          btn.click();
+          console.log("It page click to ", completeBtn);
+          completeBtn.click();
           setTimeout(() => {
-            let btn = document.querySelector('button.next-item[type="submit"]');
-            console.log("It page click to next", btn);
-            btn.click();
+            const nextBtn = document.querySelector(
+              'button[data-testid="next-item"], button[aria-label*="next" i], ' +
+                'button.cds-button-disableElevation.cds-button-primary:not([data-testid="mark-complete"]), ' +
+                'button.cds-button-disableElevation.cds-button-secondaryNeutral:not([data-testid="mark-complete"])',
+            );
+            console.log("It page click to next", nextBtn);
+            nextBtn.click();
           }, 6000);
         }, 2000);
         break;
       } else {
-        console.log("It page ungradedWidget button not found :", btn, cont);
+        console.log("It page ungradedWidget button not found :", completeBtn, cont);
         await dcelay(1000, 1);
       }
       cont--;
@@ -671,6 +710,15 @@ function tab_select_current_video_implode(params) {
     }
     isReadySkipPage();
   }
+
+  async function isReadyAssignmentSubmission() {
+    if (!analyseURL("assignmentSubmission")) {
+      console.log("It page without of assignmentSubmission content");
+      return;
+    }
+    isReadySkipPage();
+  }
+
   async function isReadyQuiz() {
     if (!analyseURL("quiz")) {
       console.log("It page without of quiz content");
@@ -719,13 +767,16 @@ function tab_select_current_video_implode(params) {
       let duration = video.duration;
       let position = Math.ceil(duration * pos);
       video.currentTime = position;
+      video.play();
     }
   }
 
   function getModouleInfo() {
     let result = {};
+    video_title = document.querySelector("d#video-item-scroll-container > h1")?.innerHTML.trim();
+    console.log("tab select getModouleInfo video_title", video_title);
     //result.module = document.querySelector("a.breadcrumb-title > span")?.innerHTML.split(" ")[1];
-    result.topic = document.querySelector("span.breadcrumb-title")?.innerHTML.trim();
+    result.topic = video_title;
     if (result.topic === undefined) {
       result.topic = document.title.split("|")[0].trim();
     }
@@ -738,22 +789,25 @@ function tab_select_current_video_implode(params) {
 
   async function isReady(title) {
     let cont = 25;
+    // Wait for any course content container to load (accordions, modules, etc.)
+    let selector = "[class*='Accordion'], [class*='NavItem'], [class*='outline'], [class*='module'], [class*='course']";
     while (cont > 0) {
-      const items = document.querySelectorAll("div.rc-NavItemName");
+      const items = document.querySelectorAll(selector);
       if (items && items.length) {
         break;
       } else {
-        console.log("not found,sleep", cont);
+        console.log("not found,sleep ", cont);
         await dcelay(1000, 1);
-        //console.log("not found,after sleep", cont);
       }
       cont--;
     }
-    const items = document.querySelectorAll("div.rc-NavItemName");
-    searchSavedTitle(savedTitle, items);
-    let searchResult = searchtitle(title, items);
+
+    // Execute global searches
+    searchSavedTitle(savedTitle);
+    let searchResult = searchtitle(title);
+
     if (automatic) {
-      console.log("automatic_mode", automatic_mode);
+      console.log("automatic_mode ", automatic_mode);
       if (automatic_mode == "a_cst") {
         isReadyVideoTranslate();
       } else if (automatic_mode == "a_save") {
@@ -771,93 +825,106 @@ function tab_select_current_video_implode(params) {
           isReadyTest();
           isReadyULti();
           isReadyDiscussion();
+          isReadyAssignmentSubmission();
         }
       }
     }
+  }
+
+  function findElementsByTitle(title) {
+    if (!title) return [];
+    const cleanTitle = title.trim().replace(/\s+/g, " ");
+    if (!cleanTitle) return [];
+
+    const results = [];
+    // Search globally across common text-containing elements
+    const elements = document.querySelectorAll("div, span, a, button, p, li");
+
+    for (const el of elements) {
+      const elText = el.innerText;
+      if (elText) {
+        // Normalize whitespace for accurate matching
+        const normalizedElText = elText.replace(/\s+/g, " ").trim();
+        if (normalizedElText == cleanTitle) {
+          results.push(el);
+        }
+      }
+    }
+
+    // Keep only the most specific (deepest) elements to avoid matching large parent wrappers
+    const specificElements = results.filter((el) => {
+      return !results.some((otherEl) => otherEl !== el && el.contains(otherEl));
+    });
+
+    return specificElements;
   }
 
   function markItemSaved(item, mode = 0) {
+    if (!item) return;
     const colorsmodes = ["#ff00005c", "lightgreen", "#f7ff005c"];
-    let obj = item?.closest(".rc-NavSingleItemDisplay")?.getElementsByClassName("rc-NavItemIcon");
-    //console.log("markItemSaved", item, mode);
-    if (obj.length) {
-      let o = obj[0];
-      let w = o.width;
+
+    // Find a suitable container or icon wrapper to apply the visual mark
+    let container =
+      item.closest('li, [role="listitem"], [class*="AccordionItem"], [class*="NavItem"]') ||
+      item.parentElement?.parentElement ||
+      item;
+    let o =
+      container?.querySelector('[class*="Icon"], [class*="icon"], svg') ||
+      container?.closest('[class*="NavItem"]')?.querySelector('[class*="Icon"]') ||
+      container;
+
+    if (o) {
+      let w = o.width || o.getBoundingClientRect()?.width;
       o.style.backgroundColor = colorsmodes[mode];
       o.style.borderRadius = "30px";
-      o.style.paddingLeft = "4px";
+      o.style.padding = "4px";
       o.style.margin = "0";
       o.style.marginRight = "4px";
-      o.style.paddingTop = "4px";
       if (w) {
-        o.style.width = w - 4 + "px";
+        o.style.width = parseFloat(w) - 4 + "px";
       } else {
         o.style.width = "28px";
       }
-      //console.log("markItemSaved style", item, o.style);
+      o.style.display = "inline-flex";
+      o.style.alignItems = "center";
+      o.style.justifyContent = "center";
     }
   }
 
-  function searchSavedTitle(stitle, items) {
-    let title = stitle;
+  function searchSavedTitle(stitle) {
     let pagemarked = undefined;
-    //const items = document.querySelectorAll("div.rc-NavItemName");
-    // console.log("searchtitle, items:", title, items.length);
-    if (title) {
-      for (const item of items) {
-        // items.forEach((item) => {
-        let titles = item.innerText.split("\n");
-        if (titles.length < 2) {
-          titles = item.innerHTML.split("</strong>");
-        }
-        titles = titles.pop().trim();
-        if (title && titles) {
-          //console.log("item titles", title, titles);
-          if (title.normalize("NFC") == titles.normalize("NFC")) {
-            //console.log("item - found. title:", title, "savedTitle:", savedTitle, "preparing_mode:", preparing_mode);
-            //item.scrollIntoView({ behavior: "smooth", block: "center" });
-            //pagemarked = isPageMarked(item);
-            if (stitle) {
-              let colormode = 0;
-              //if (preparing_mode) colormode = 2;
-              markItemSaved(item, colormode);
-              return { result: true, pagemarked: pagemarked };
-            }
-          }
-        }
+    if (stitle) {
+      // Use global search instead of iterating over a fixed list of items
+      const items = findElementsByTitle(stitle);
+      if (items.length > 0) {
+        let colormode = 0;
+        markItemSaved(items[0], colormode);
+        return { result: true, pagemarked: pagemarked };
       }
     }
     return { result: false, pagemarked: pagemarked };
   }
 
-  function searchtitle(stitle, items) {
+  function searchtitle(stitle) {
     let title = getModouleInfo()?.topic;
     let pagemarked = undefined;
     if (title === undefined) title = stitle.trim();
-    //const items = document.querySelectorAll("div.rc-NavItemName");
-    // console.log("searchtitle, items:", title, items.length);
+
     if (title) {
-      for (const item of items) {
-        // items.forEach((item) => {
-        let titles = item.innerText.split("\n");
-        if (titles.length < 2) {
-          titles = item.innerHTML.split("</strong>");
+      // Use global search
+      const items = findElementsByTitle(title);
+      if (items.length > 0) {
+        const item = items[0];
+        item.scrollIntoView({ behavior: "smooth", block: "center" });
+        pagemarked = isPageMarked(item);
+
+        if (analyseURL("video") && savedTitle) {
+          let colormode = savedTitle.normalize("NFC") != title.normalize("NFC") ? 1 : 0;
+          if (preparing_mode) colormode = 2;
+          markItemSaved(item, colormode);
+          return { result: true, pagemarked: pagemarked };
         }
-        titles = titles.pop().trim();
-        if (title && titles) {
-          //console.log("item titles", title, titles);
-          if (title.normalize("NFC") == titles.normalize("NFC")) {
-            //console.log("item - found. title:", title, "savedTitle:", savedTitle, "preparing_mode:", preparing_mode);
-            item.scrollIntoView({ behavior: "smooth", block: "center" });
-            pagemarked = isPageMarked(item);
-            if (analyseURL("video") && savedTitle) {
-              let colormode = savedTitle.normalize("NFC") != title.normalize("NFC") ? 1 : 0;
-              if (preparing_mode) colormode = 2;
-              markItemSaved(item, colormode);
-              return { result: true, pagemarked: pagemarked };
-            }
-          }
-        }
+        return { result: true, pagemarked: pagemarked };
       }
     }
     return { result: false, pagemarked: pagemarked };
@@ -1146,7 +1213,7 @@ function implode_save(saveparam, fileConfig, tabid = 0) {
       saveAsFile(
         saveparam.videotext_addon[lang],
         saveparam.filename + fileConfig.title_delimeter + lang + fileConfig.ext_text,
-        saveMode
+        saveMode,
       );
     });
   }
@@ -1156,7 +1223,7 @@ function implode_save(saveparam, fileConfig, tabid = 0) {
       saveAsFile(
         saveparam.subtitle_addon[lang],
         saveparam.filename + fileConfig.title_delimeter + lang + fileConfig.ext_sub,
-        saveMode
+        saveMode,
       );
     });
   }
@@ -1204,8 +1271,8 @@ function implode_getCourseInfo(saveObjectsReq) {
 
   function searchVideoDuratiom() {
     let duration;
-          let video = document.getElementsByTagName("video");
-      if (video) video=video[0];
+    let video = document.getElementsByTagName("video");
+    if (video) video = video[0];
     if (video && video.readyState > 0) {
       duration = Math.round(video.duration / 60);
     }
@@ -1225,11 +1292,41 @@ function implode_getCourseInfo(saveObjectsReq) {
     return result;
   }
 
+  function findElementsByTitle(title) {
+    if (!title) return [];
+    const cleanTitle = title.trim().replace(/\s+/g, " ");
+    if (!cleanTitle) return [];
+
+    const results = [];
+    // Search globally across common text-containing elements
+    const elements = document.querySelectorAll("div, span, a, button, h2, h3, h4, p, li");
+
+    for (const el of elements) {
+      const elText = el.innerText;
+      if (elText) {
+        // Normalize whitespace for accurate matching
+        const normalizedElText = elText.replace(/\s+/g, " ").trim();
+        if (normalizedElText.includes(cleanTitle)) {
+          results.push(el);
+        }
+      }
+    }
+
+    // Keep only the most specific (deepest) elements to avoid matching large parent wrappers
+    const specificElements = results.filter((el) => {
+      return !results.some((otherEl) => otherEl !== el && el.contains(otherEl));
+    });
+
+    return specificElements;
+  }
+
   function getModouleInfo() {
     let result = {};
-    result.course = document
-      .querySelector("div.rc-ItemNavBreadcrumbs > div > ol.breadcrumb-list  > li:nth-child(1) > a")
-      ?.innerHTML.trim();
+    video_title = document.querySelector("d#video-item-scroll-container  > h1")?.innerHTML.trim();
+    tree_element = findElementsByTitle(video_title);
+    console.log("getModouleInfo video_title", video_title);
+    console.log("getModouleInfo tree_element", tree_element);
+    result.course = document.querySelector("d#video-item-scroll-container  > h1")?.innerHTML.trim();
     result.module = document.querySelector("a.breadcrumb-title > span")?.innerHTML.split(" ")[1];
     result.topic = document.querySelector("span.breadcrumb-title")?.innerHTML.trim();
     result.videoduration = searchVideoDuratiom();
@@ -1302,6 +1399,7 @@ function implode_getCourseInfo(saveObjectsReq) {
   }
 
   // main code of implode
+  console.log("impolde_getCourseinfo main");
   let result = { error: "404" };
   let lang = searchCourseLanguage();
   let lang_add = saveObjectsReq.subtitle_addon_lang;
