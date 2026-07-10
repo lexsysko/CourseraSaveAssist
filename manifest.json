@@ -7,7 +7,8 @@
   "manifest_version": 3,
   "permissions": ["scripting", "storage", "downloads"],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "scripts": ["background.js"]
   },
   "options_ui": {
     "page": "options.html",
@@ -36,5 +37,15 @@
     "128": "/images/button-ico-128.png",
     "256": "/images/button-ico-256.png",
     "512": "/images/button-ico-512.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "csa@lexsysko",
+      "data_collection_permissions": {
+        "required": ["none"],
+        "collects_data": false,
+        "description": "CSA does not collect, transmit, or share any personal user data. All saved files remain local to the user's device."
+      }
+    }
   }
 }
