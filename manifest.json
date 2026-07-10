@@ -1,9 +1,9 @@
 {
   "name": "__MSG_plug_name__",
   "description": "__MSG_plug_description__",
-  "version": "2.2.0",
-  "author": "lexxai",
-  "homepage_url": "https://github.com/lexxai/CourseraSaveAssist/wiki",
+  "version": "3.0.0",
+  "author": "lexsysko",
+  "homepage_url": "https://github.com/lexsysko/CourseraSaveAssist/wiki",
   "manifest_version": 3,
   "permissions": ["scripting", "storage", "downloads"],
   "background": {

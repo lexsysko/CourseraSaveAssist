@@ -309,7 +309,7 @@ async function Initialize() {
   } catch (e) {}
   if (ownersite.indexOf(fileConfig.host_url) !== -1) {
     debuglog(browser.i18n.getMessage("SEARCHVIDEO"));
-    getCourseInfo();
+    getCourseInfoPopUp();
     //search_module();
   } else {
     debuglog(browser.i18n.getMessage("WRONGSITE") + " " + fileConfig.host_url);
@@ -508,7 +508,7 @@ function implode_save(saveparam, fileConfig, tabid = 0) {
       saveAsFile(
         saveparam.videotext_addon[lang],
         saveparam.filename + fileConfig.title_delimeter + lang + fileConfig.ext_text,
-        saveMode
+        saveMode,
       );
     });
   }
@@ -518,7 +518,7 @@ function implode_save(saveparam, fileConfig, tabid = 0) {
       saveAsFile(
         saveparam.subtitle_addon[lang],
         saveparam.filename + fileConfig.title_delimeter + lang + fileConfig.ext_sub,
-        saveMode
+        saveMode,
       );
     });
   }
@@ -599,7 +599,7 @@ async function addListeners() {
       (e) => {
         onClickAutomaticMode(e);
       },
-      false
+      false,
     );
 
     let mode_text = browser.i18n.getMessage("AUTOMATIC_TEXT");
@@ -725,13 +725,32 @@ function implode_getCourseInfo(saveObjectsReq) {
 
   function searchCourseID() {
     let result = { success: false };
+    // New approach: search all elements with data-click-value
+    let elements = document.querySelectorAll("[data-click-value]");
+    for (let el of elements) {
+      let attr = el.getAttribute("data-click-value");
+      if (attr) {
+        try {
+          let ci = JSON.parse(attr);
+          if (ci && ci.course_id && ci.item_id) {
+            result.course_id = ci.course_id;
+            result.item_id = ci.item_id;
+            result.success = true;
+            return result;
+          }
+        } catch (e) {}
+      }
+    }
+
+    // Fallback for older pages
     let ci = document.querySelector("div.m-a-0.body > a")?.getAttribute("data-click-value");
     if (ci) {
-      ci = JSON.parse(ci);
-      //console.log("coureinfo cs", ci, ci?.course_id);
-      result.course_id = ci?.course_id;
-      result.item_id = ci?.item_id;
-      if (result.course_id && result.item_id) result.success = true;
+      try {
+        ci = JSON.parse(ci);
+        result.course_id = ci?.course_id;
+        result.item_id = ci?.item_id;
+        if (result.course_id && result.item_id) result.success = true;
+      } catch (e) {}
     }
     return result;
   }
@@ -752,10 +771,31 @@ function implode_getCourseInfo(saveObjectsReq) {
     let result = {};
     let pathname = window.location.pathname;
     let course_path = pathname.split("/")[2];
-    result.course = course_path.replace("-", " ");
-    result.module = document
-      .querySelector("div.rc-ItemNavBreadcrumbs > nav > ol > li:nth-child(2) > a > span")
-      ?.innerHTML.split(" ")[1];
+    result.course = course_path.replace(/-/g, " ");
+
+    // Safe module extraction for new Coursera UI
+    let currentItem = document.querySelector('li[data-current-item="true"]');
+    if (currentItem) {
+      let panel = currentItem.closest('[role="region"]');
+      let headerId = panel?.getAttribute("aria-labelledby");
+      if (headerId) {
+        let header = document.getElementById(headerId);
+        let moduleHeading = header?.querySelector('[data-testid="module-number-heading"]')?.innerText;
+        if (moduleHeading) {
+          result.module = moduleHeading.split(" ")?.[1];
+        }
+      }
+    }
+
+    // Fallback for module
+    if (result.module === undefined) {
+      let moduleEl = document.querySelector("a.breadcrumb-title > span");
+      if (moduleEl) {
+        result.module = moduleEl.innerHTML.split(" ")[1];
+      }
+    }
+
+    // Topic extraction
     const element = document.querySelector("h1.video-name");
     if (element) {
       const textContent = Array.from(element.childNodes)
@@ -763,6 +803,13 @@ function implode_getCourseInfo(saveObjectsReq) {
         .map((node) => node.textContent.trim())
         .join(" ");
       result.topic = textContent;
+    }
+
+    if (result.topic === undefined) {
+      result.topic = document.querySelector("span.breadcrumb-title")?.innerHTML.trim();
+    }
+    if (result.topic === undefined) {
+      result.topic = document.title.split("|")[0].trim();
     }
 
     result.videoduration = searchVideoDuratiom();
@@ -863,8 +910,8 @@ function implode_getCourseInfo(saveObjectsReq) {
   //console.log("coureinfo", courseinfo, URL, result);
 }
 
-function getCourseInfo() {
-  console.log("getCourseInfo start");
+function getCourseInfoPopUp() {
+  console.log("getCourseInfoPopUp start");
   waitCourseInfoID = setTimeout(() => {
     console.log("Timeout of get Course Info");
     debuglog(browser.i18n.getMessage("NOVIDEO"));

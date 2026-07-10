@@ -12,16 +12,16 @@ We understand the importance of retaining knowledge, and our mission is to empow
 
 ## Google Chrome Extension 
 ### "CSA - Asst. for saving files from Сoursera"
-Latest release: [![GitHub release (latest by date)](https://img.shields.io/github/v/release/lexxai/CourseraSaveAssist)](https://github.com/lexxai/CourseraSaveAssist/releases/latest)
+Latest release: [![GitHub release (latest by date)](https://img.shields.io/github/v/release/lexsysko/CourseraSaveAssist)](https://github.com/lexsysko/CourseraSaveAssist/releases/latest)
 
-Version for development: [![current version](https://img.shields.io/github/manifest-json/v/lexxai/CourseraSaveAssist)](https://github.com/lexxai/CourseraSaveAssist/archive/refs/heads/main.zip)
+Version for development: [![current version](https://img.shields.io/github/manifest-json/v/lexsysko/CourseraSaveAssist)](https://github.com/lexsysko/CourseraSaveAssist/archive/refs/heads/main.zip)
 
-**[Download](https://github.com/lexxai/CourseraSaveAssist/wiki/Download) | [Features](https://github.com/lexxai/CourseraSaveAssist/wiki/Features) | [What's new?](https://github.com/lexxai/CourseraSaveAssist/wiki/What's-new%3F) | [Donate](https://github.com/lexxai/CourseraSaveAssist/wiki/Donate)**
+**[Download](https://github.com/lexsysko/CourseraSaveAssist/wiki/Download) | [Features](https://github.com/lexsysko/CourseraSaveAssist/wiki/Features) | [What's new?](https://github.com/lexsysko/CourseraSaveAssist/wiki/What's-new%3F) | [Donate](https://github.com/lexsysko/CourseraSaveAssist/wiki/Donate)**
 
 ### The application is publicly available in the Store
 
-- Chrome Google Web Store  [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/dmoebncbmkgfpjhjikkjljmbaacncohl)](https://github.com/lexxai/CourseraSaveAssist/wiki/Download)
-- Microsoft Edge Web Store  [![Static Badge](https://img.shields.io/badge/microsoft%20web%20store_-v2.2.0-blue)](https://github.com/lexxai/CourseraSaveAssist/wiki/Download)
+- Chrome Google Web Store  [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/dmoebncbmkgfpjhjikkjljmbaacncohl)](https://github.com/lexsysko/CourseraSaveAssist/wiki/Download)
+- Microsoft Edge Web Store  [![Static Badge](https://img.shields.io/badge/microsoft%20web%20store_-v2.2.0-blue)](https://github.com/lexsysko/CourseraSaveAssist/wiki/Download)
 
 The application has also been additionally initiated to be added to the stores for other browsers. Now stores are previewing the app before publishing it.
 
@@ -32,19 +32,19 @@ The application has also been additionally tested in the following browsers:
 - Opera (98.0.4759.15, Windows 11 x64)
 
 Example:
-- https://lexxai.blogspot.com/2023/04/chrome-edge-oursera.html
+- [https://lexsysko.github.io/2023/04/26](https://lexsysko.github.io/2023/04/26/%D1%81%D1%82%D0%B2%D0%BE%D1%80%D0%B8%D0%B2-%D0%BF%D0%BB%D0%B0%D0%B3%D1%96%D0%BD-%D0%B4%D0%BB%D1%8F-%D0%B1%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80%D0%B0-chrome-edge-%D0%BF%D0%BE%D0%BC%D1%96%D1%87%D0%BD%D0%B8%D0%BA-%D0%B4%D0%BB%D1%8F-%D0%B7%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F-%D1%84%D0%B0%D0%B9%D0%BB%D1%96%D0%B2-%D0%B7-coursera.html)
 - https://www.youtube.com/playlist?list=PLAh8fZIeoVeULJoj2ADdioPu9m1pM0etL
 
-![CSA-MENU1-EN-1-7](https://github.com/lexxai/CourseraSaveAssist/assets/3278842/cbadca27-0264-4ae7-9cbb-6b17de77e905)
-![CSA-OPTION-EN-1-7](https://github.com/lexxai/CourseraSaveAssist/assets/3278842/2abc6a4b-e8c4-4f8d-adf1-265a3be8182c)
+![CSA-MENU1-EN-1-7](https://github.com/lexsysko/CourseraSaveAssist/assets/3278842/cbadca27-0264-4ae7-9cbb-6b17de77e905)
+![CSA-OPTION-EN-1-7](https://github.com/lexsysko/CourseraSaveAssist/assets/3278842/2abc6a4b-e8c4-4f8d-adf1-265a3be8182c)
 
 
 # CSA - Помічник для збереження файлів з Сoursera
-Останній реліз: [![GitHub release (latest by date)](https://img.shields.io/github/v/release/lexxai/CourseraSaveAssist)](https://github.com/lexxai/CourseraSaveAssist/releases/latest)
+Останній реліз: [![GitHub release (latest by date)](https://img.shields.io/github/v/release/lexsysko/CourseraSaveAssist)](https://github.com/lexsysko/CourseraSaveAssist/releases/latest)
 
-Версія в розробці: [![current version](https://img.shields.io/github/manifest-json/v/lexxai/CourseraSaveAssist)](https://github.com/lexxai/CourseraSaveAssist/archive/refs/heads/main.zip)
+Версія в розробці: [![current version](https://img.shields.io/github/manifest-json/v/lexsysko/CourseraSaveAssist)](https://github.com/lexsysko/CourseraSaveAssist/archive/refs/heads/main.zip)
 
-**[Завантаження](https://github.com/lexxai/CourseraSaveAssist/wiki/%D0%97%D0%B0%D0%B2%D0%B0%D0%BD%D1%82%D0%B0%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F) | [Можливості](https://github.com/lexxai/CourseraSaveAssist/wiki/Features) | [Що нового?](https://github.com/lexxai/CourseraSaveAssist/wiki/%D0%A9%D0%BE-%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE%3F) | [Допомога проєкту](https://github.com/lexxai/CourseraSaveAssist/wiki/%D0%94%D0%BE%D0%BF%D0%BE%D0%BC%D0%BE%D0%B3%D0%B0-%D0%BF%D1%80%D0%BE%D1%94%D0%BA%D1%82%D1%83)**
+**[Завантаження](https://github.com/lexsysko/CourseraSaveAssist/wiki/%D0%97%D0%B0%D0%B2%D0%B0%D0%BD%D1%82%D0%B0%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F) | [Можливості](https://github.com/lexsysko/CourseraSaveAssist/wiki/Features) | [Що нового?](https://github.com/lexsysko/CourseraSaveAssist/wiki/%D0%A9%D0%BE-%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE%3F) | [Допомога проєкту](https://github.com/lexsysko/CourseraSaveAssist/wiki/%D0%94%D0%BE%D0%BF%D0%BE%D0%BC%D0%BE%D0%B3%D0%B0-%D0%BF%D1%80%D0%BE%D1%94%D0%BA%D1%82%D1%83)**
 
 "CSA - Помічник для збереження файлів з Coursera" - розширення для браузера Google Chrome, яке робить збереження відеоматеріалів з Coursera легким та зручним.
 
@@ -56,8 +56,8 @@ Example:
 
 ### Додаток є в публічному доступі в Store 
 
-- Chrome Google Web Store  [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/dmoebncbmkgfpjhjikkjljmbaacncohl)](https://github.com/lexxai/CourseraSaveAssist/wiki/%D0%97%D0%B0%D0%B2%D0%B0%D0%BD%D1%82%D0%B0%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F)
-- Microsoft Edge Web Store  [![Static Badge](https://img.shields.io/badge/microsoft%20web%20store_-v2.2.0-blue)](https://github.com/lexxai/CourseraSaveAssist/wiki/%D0%97%D0%B0%D0%B2%D0%B0%D0%BD%D1%82%D0%B0%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F)
+- Chrome Google Web Store  [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/dmoebncbmkgfpjhjikkjljmbaacncohl)](https://github.com/lexsysko/CourseraSaveAssist/wiki/%D0%97%D0%B0%D0%B2%D0%B0%D0%BD%D1%82%D0%B0%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F)
+- Microsoft Edge Web Store  [![Static Badge](https://img.shields.io/badge/microsoft%20web%20store_-v2.2.0-blue)](https://github.com/lexsysko/CourseraSaveAssist/wiki/%D0%97%D0%B0%D0%B2%D0%B0%D0%BD%D1%82%D0%B0%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F)
 
 Додаток також було додатково ініційованно до додавання у магазини інших браузерів. Зараз магазини превряють додаток перед публікацією.
 
@@ -68,15 +68,15 @@ Example:
 - Opera (98.0.4759.15, Windows 11 x64)
 
 Приклдади:
-- https://lexxai.blogspot.com/2023/04/chrome-edge-oursera.html
+- [https://lexsysko.github.io/2023/04/26](https://lexsysko.github.io/2023/04/26/%D1%81%D1%82%D0%B2%D0%BE%D1%80%D0%B8%D0%B2-%D0%BF%D0%BB%D0%B0%D0%B3%D1%96%D0%BD-%D0%B4%D0%BB%D1%8F-%D0%B1%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80%D0%B0-chrome-edge-%D0%BF%D0%BE%D0%BC%D1%96%D1%87%D0%BD%D0%B8%D0%BA-%D0%B4%D0%BB%D1%8F-%D0%B7%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F-%D1%84%D0%B0%D0%B9%D0%BB%D1%96%D0%B2-%D0%B7-coursera.html)
 - https://www.youtube.com/playlist?list=PLAh8fZIeoVeULJoj2ADdioPu9m1pM0etL
 
 Локалізацію створено за допомогою: [https://crowdin.com/project/courserasaveassist](https://crowdin.com/project/courserasaveassist)
 [![Crowdin](https://badges.crowdin.net/courserasaveassist/localized.svg)](https://crowdin.com/project/courserasaveassist)
 
 ![CSA-MENU1-UA-1-6](https://user-images.githubusercontent.com/3278842/236651277-6c3d7f20-1121-4cbe-8b38-478713342ec1.png)
-![зображення](https://github.com/lexxai/CourseraSaveAssist/assets/3278842/41b65080-4a9e-4069-8dae-de81c20d7203)
-![зображення](https://github.com/lexxai/CourseraSaveAssist/assets/3278842/52007518-5697-4dc5-b17b-c42954533e28)
+![зображення](https://github.com/lexsysko/CourseraSaveAssist/assets/3278842/41b65080-4a9e-4069-8dae-de81c20d7203)
+![зображення](https://github.com/lexsysko/CourseraSaveAssist/assets/3278842/52007518-5697-4dc5-b17b-c42954533e28)
 
 
 
