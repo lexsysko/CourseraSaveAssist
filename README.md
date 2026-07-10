@@ -35,8 +35,9 @@ Example:
 - [https://lexsysko.github.io/2023/04/26](https://lexsysko.github.io/2023/04/26/%D1%81%D1%82%D0%B2%D0%BE%D1%80%D0%B8%D0%B2-%D0%BF%D0%BB%D0%B0%D0%B3%D1%96%D0%BD-%D0%B4%D0%BB%D1%8F-%D0%B1%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80%D0%B0-chrome-edge-%D0%BF%D0%BE%D0%BC%D1%96%D1%87%D0%BD%D0%B8%D0%BA-%D0%B4%D0%BB%D1%8F-%D0%B7%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F-%D1%84%D0%B0%D0%B9%D0%BB%D1%96%D0%B2-%D0%B7-coursera.html)
 - https://www.youtube.com/playlist?list=PLAh8fZIeoVeULJoj2ADdioPu9m1pM0etL
 
-![CSA-MENU1-EN-1-7](https://github.com/lexsysko/CourseraSaveAssist/assets/3278842/cbadca27-0264-4ae7-9cbb-6b17de77e905)
-![CSA-OPTION-EN-1-7](https://github.com/lexsysko/CourseraSaveAssist/assets/3278842/2abc6a4b-e8c4-4f8d-adf1-265a3be8182c)
+<img width="1743" height="858" alt="CSA-2026-07-1" src="https://github.com/user-attachments/assets/2a061428-0c6b-4cfa-843d-54d3f18ec581" />
+<img width="1796" height="801" alt="CSA-2026-07-2" src="https://github.com/user-attachments/assets/e8f4ed1f-7924-4511-8c6e-dceb7d00c481" />
+<img width="1377" height="787" alt="CSA-2026-07-3" src="https://github.com/user-attachments/assets/057310ba-058a-4547-a292-33fe51c55e3f" />
 
 
 # CSA - Помічник для збереження файлів з Сoursera
@@ -74,9 +75,11 @@ Example:
 Локалізацію створено за допомогою: [https://crowdin.com/project/courserasaveassist](https://crowdin.com/project/courserasaveassist)
 [![Crowdin](https://badges.crowdin.net/courserasaveassist/localized.svg)](https://crowdin.com/project/courserasaveassist)
 
-![CSA-MENU1-UA-1-6](https://user-images.githubusercontent.com/3278842/236651277-6c3d7f20-1121-4cbe-8b38-478713342ec1.png)
-![зображення](https://github.com/lexsysko/CourseraSaveAssist/assets/3278842/41b65080-4a9e-4069-8dae-de81c20d7203)
-![зображення](https://github.com/lexsysko/CourseraSaveAssist/assets/3278842/52007518-5697-4dc5-b17b-c42954533e28)
+<img width="1743" height="858" alt="CSA-2026-07-1" src="https://github.com/user-attachments/assets/2a061428-0c6b-4cfa-843d-54d3f18ec581" />
+<img width="1796" height="801" alt="CSA-2026-07-2" src="https://github.com/user-attachments/assets/e8f4ed1f-7924-4511-8c6e-dceb7d00c481" />
+<img width="1377" height="787" alt="CSA-2026-07-3" src="https://github.com/user-attachments/assets/057310ba-058a-4547-a292-33fe51c55e3f" />
+
+
 
 
 
