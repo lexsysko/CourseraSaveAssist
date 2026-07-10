@@ -239,9 +239,9 @@ function languageDetect() {
   document.querySelector("title").innerHTML =
     browser.i18n.getMessage("plug_name") + " : " + browser.i18n.getMessage("OPTIONS");
   const urls = {
-    ru: "https://github.com/lexxai/CourseraSaveAssist/wiki/%D0%9F%D0%BE%D0%BC%D1%96%D1%87%D0%BD%D0%B8%D0%BA-CSA",
-    uk: "https://github.com/lexxai/CourseraSaveAssist/wiki/%D0%9F%D0%BE%D0%BC%D1%96%D1%87%D0%BD%D0%B8%D0%BA-CSA",
-    default: "https://github.com/lexxai/CourseraSaveAssist/wiki",
+    ru: "https://github.com/lexsysko/CourseraSaveAssist/wiki/%D0%9F%D0%BE%D0%BC%D1%96%D1%87%D0%BD%D0%B8%D0%BA-CSA",
+    uk: "https://github.com/lexsysko/CourseraSaveAssist/wiki/%D0%9F%D0%BE%D0%BC%D1%96%D1%87%D0%BD%D0%B8%D0%BA-CSA",
+    default: "https://github.com/lexsysko/CourseraSaveAssist/wiki",
   };
   let language = window.navigator.userLanguage || window.navigator.language;
   language = language.split("-")[0];

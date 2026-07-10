@@ -68,7 +68,7 @@ Example:
 - Opera (98.0.4759.15, Windows 11 x64)
 
 Приклдади:
-- https://lexxai.blogspot.com/2023/04/chrome-edge-oursera.html
+- [https://lexsysko.github.io/2023/04/26](https://lexsysko.github.io/2023/04/26/%D1%81%D1%82%D0%B2%D0%BE%D1%80%D0%B8%D0%B2-%D0%BF%D0%BB%D0%B0%D0%B3%D1%96%D0%BD-%D0%B4%D0%BB%D1%8F-%D0%B1%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80%D0%B0-chrome-edge-%D0%BF%D0%BE%D0%BC%D1%96%D1%87%D0%BD%D0%B8%D0%BA-%D0%B4%D0%BB%D1%8F-%D0%B7%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F-%D1%84%D0%B0%D0%B9%D0%BB%D1%96%D0%B2-%D0%B7-coursera.html)
 - https://www.youtube.com/playlist?list=PLAh8fZIeoVeULJoj2ADdioPu9m1pM0etL
 
 Локалізацію створено за допомогою: [https://crowdin.com/project/courserasaveassist](https://crowdin.com/project/courserasaveassist)

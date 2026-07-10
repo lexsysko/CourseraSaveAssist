@@ -1,7 +1,7 @@
 //author= Mücahit Sahin
 //github=https://github.com/mucahit-sahin
 //author of fork with addons = lexsysko
-//github=https://github.com/lexxai/coursera-subtitle-translate-extension
+//github=https://github.com/lexsysko/coursera-subtitle-translate-extension
 
 window.browser = (function () {
   return typeof window.browser === "undefined" ? window.chrome : window.browser;
