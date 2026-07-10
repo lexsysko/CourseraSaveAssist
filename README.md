@@ -35,9 +35,9 @@ Example:
 - [https://lexsysko.github.io/2023/04/26](https://lexsysko.github.io/2023/04/26/%D1%81%D1%82%D0%B2%D0%BE%D1%80%D0%B8%D0%B2-%D0%BF%D0%BB%D0%B0%D0%B3%D1%96%D0%BD-%D0%B4%D0%BB%D1%8F-%D0%B1%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80%D0%B0-chrome-edge-%D0%BF%D0%BE%D0%BC%D1%96%D1%87%D0%BD%D0%B8%D0%BA-%D0%B4%D0%BB%D1%8F-%D0%B7%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F-%D1%84%D0%B0%D0%B9%D0%BB%D1%96%D0%B2-%D0%B7-coursera.html)
 - https://www.youtube.com/playlist?list=PLAh8fZIeoVeULJoj2ADdioPu9m1pM0etL
 
-![i1](https://github.com/user-attachments/assets/2a061428-0c6b-4cfa-843d-54d3f18ec581)
-![i2](https://github.com/user-attachments/assets/e8f4ed1f-7924-4511-8c6e-dceb7d00c481)
-![i3](https://github.com/user-attachments/assets/057310ba-058a-4547-a292-33fe51c55e3f)
+![i1](https://github.com/user-attachments/assets/42af7b26-2a89-4056-8aba-bc83c316b3d8)
+![i2](https://github.com/user-attachments/assets/3a765987-0367-4981-8285-969679ccd830)
+![i3](https://github.com/user-attachments/assets/3dbd8f33-5b2a-46aa-b0ee-604183780bae)
 
 
 # CSA - Помічник для збереження файлів з Сoursera
@@ -75,9 +75,9 @@ Example:
 Локалізацію створено за допомогою: [https://crowdin.com/project/courserasaveassist](https://crowdin.com/project/courserasaveassist)
 [![Crowdin](https://badges.crowdin.net/courserasaveassist/localized.svg)](https://crowdin.com/project/courserasaveassist)
 
-<img width="1743" height="858" alt="CSA-2026-07-1" src="https://github.com/user-attachments/assets/2a061428-0c6b-4cfa-843d-54d3f18ec581" />
-<img width="1796" height="801" alt="CSA-2026-07-2" src="https://github.com/user-attachments/assets/e8f4ed1f-7924-4511-8c6e-dceb7d00c481" />
-<img width="1377" height="787" alt="CSA-2026-07-3" src="https://github.com/user-attachments/assets/057310ba-058a-4547-a292-33fe51c55e3f" />
+![i1](https://github.com/user-attachments/assets/42af7b26-2a89-4056-8aba-bc83c316b3d8)
+![i2](https://github.com/user-attachments/assets/3a765987-0367-4981-8285-969679ccd830)
+![i3](https://github.com/user-attachments/assets/3dbd8f33-5b2a-46aa-b0ee-604183780bae)
 
 
 
