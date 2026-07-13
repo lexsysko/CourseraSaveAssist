@@ -22,6 +22,7 @@ Version for development: [![current version](https://img.shields.io/github/manif
 
 - Chrome Google Web Store  [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/dmoebncbmkgfpjhjikkjljmbaacncohl)](https://github.com/lexsysko/CourseraSaveAssist/wiki/Download)
 - Microsoft Edge Web Store  [![Static Badge](https://img.shields.io/badge/microsoft%20web%20store_-v2.2.0-blue)](https://github.com/lexsysko/CourseraSaveAssist/wiki/Download)
+- Mozilla Addons Web Store  [![Static Badge](https://img.shields.io/badge/Mozilla%20Addons%20Web%20Store_-v3.0.0-blue)](https://github.com/lexsysko/CourseraSaveAssist/wiki/Download)
 
 The application has also been additionally initiated to be added to the stores for other browsers. Now stores are previewing the app before publishing it.
 
@@ -30,6 +31,7 @@ The application has also been additionally tested in the following browsers:
 - Google Chrome (113.0.5672.92 (Official Build) x86-64, macOS Monterey v.12.6.1)
 - Microsoft Egde (112.0.1722.68, Windows 11 x64)
 - Opera (98.0.4759.15, Windows 11 x64)
+- Moziila Firefox 152.0.3 (Windows 11 x64)
 
 Example:
 - [https://lexsysko.github.io/2023/04/26](https://lexsysko.github.io/2023/04/26/%D1%81%D1%82%D0%B2%D0%BE%D1%80%D0%B8%D0%B2-%D0%BF%D0%BB%D0%B0%D0%B3%D1%96%D0%BD-%D0%B4%D0%BB%D1%8F-%D0%B1%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80%D0%B0-chrome-edge-%D0%BF%D0%BE%D0%BC%D1%96%D1%87%D0%BD%D0%B8%D0%BA-%D0%B4%D0%BB%D1%8F-%D0%B7%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F-%D1%84%D0%B0%D0%B9%D0%BB%D1%96%D0%B2-%D0%B7-coursera.html)
@@ -59,6 +61,7 @@ Example:
 
 - Chrome Google Web Store  [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/dmoebncbmkgfpjhjikkjljmbaacncohl)](https://github.com/lexsysko/CourseraSaveAssist/wiki/%D0%97%D0%B0%D0%B2%D0%B0%D0%BD%D1%82%D0%B0%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F)
 - Microsoft Edge Web Store  [![Static Badge](https://img.shields.io/badge/microsoft%20web%20store_-v2.2.0-blue)](https://github.com/lexsysko/CourseraSaveAssist/wiki/%D0%97%D0%B0%D0%B2%D0%B0%D0%BD%D1%82%D0%B0%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F)
+- Mozilla Addons Web Store  [![Static Badge](https://img.shields.io/badge/Mozilla%20Addons%20Web%20Store_-v3.0.0-blue)](https://github.com/lexsysko/CourseraSaveAssist/wiki/%D0%97%D0%B0%D0%B2%D0%B0%D0%BD%D1%82%D0%B0%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F)
 
 Додаток також було додатково ініційованно до додавання у магазини інших браузерів. Зараз магазини превряють додаток перед публікацією.
 
@@ -67,6 +70,7 @@ Example:
 - Google Chrome (113.0.5672.92 (Official Build) x86-64, macOS Monterey v.12.6.1)
 - Microsoft Egde (112.0.1722.68, Windows 11 x64)
 - Opera (98.0.4759.15, Windows 11 x64)
+- Moziila Firefox 152.0.3 (Windows 11 x64)
 
 Приклдади:
 - [https://lexsysko.github.io/2023/04/26](https://lexsysko.github.io/2023/04/26/%D1%81%D1%82%D0%B2%D0%BE%D1%80%D0%B8%D0%B2-%D0%BF%D0%BB%D0%B0%D0%B3%D1%96%D0%BD-%D0%B4%D0%BB%D1%8F-%D0%B1%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80%D0%B0-chrome-edge-%D0%BF%D0%BE%D0%BC%D1%96%D1%87%D0%BD%D0%B8%D0%BA-%D0%B4%D0%BB%D1%8F-%D0%B7%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F-%D1%84%D0%B0%D0%B9%D0%BB%D1%96%D0%B2-%D0%B7-coursera.html)
