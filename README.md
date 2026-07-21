@@ -21,8 +21,8 @@ Version for development: [![current version](https://img.shields.io/github/manif
 ### The application is publicly available in the Store
 
 - Chrome Google Web Store  [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/dmoebncbmkgfpjhjikkjljmbaacncohl)](https://github.com/lexsysko/CourseraSaveAssist/wiki/Download)
-- Microsoft Edge Web Store  [![Static Badge](https://img.shields.io/badge/microsoft%20web%20store_-v2.2.0-blue)](https://github.com/lexsysko/CourseraSaveAssist/wiki/Download)
-- Mozilla Firefox Addons Web Store  [![Static Badge](https://img.shields.io/badge/Mozilla%20Firefox%20Addons%20Web%20Store_-v3.0.0-blue)](https://github.com/lexsysko/CourseraSaveAssist/wiki/Download)
+- Microsoft Edge Web Store  [![Static Badge](https://img.shields.io/badge/microsoft%20web%20store_-v3.0.0-blue)](https://github.com/lexsysko/CourseraSaveAssist/wiki/Download)
+- Mozilla Firefox Addons Web Store  [![Static Badge](https://img.shields.io/badge/mozilla%20firefox%20addons%20web%20store_-v3.0.0-blue)](https://github.com/lexsysko/CourseraSaveAssist/wiki/Download)
 
 The application has also been additionally initiated to be added to the stores for other browsers. Now stores are previewing the app before publishing it.
 
@@ -60,8 +60,8 @@ Example:
 ### Додаток є в публічному доступі в Store 
 
 - Chrome Google Web Store  [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/dmoebncbmkgfpjhjikkjljmbaacncohl)](https://github.com/lexsysko/CourseraSaveAssist/wiki/%D0%97%D0%B0%D0%B2%D0%B0%D0%BD%D1%82%D0%B0%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F)
-- Microsoft Edge Web Store  [![Static Badge](https://img.shields.io/badge/microsoft%20web%20store_-v2.2.0-blue)](https://github.com/lexsysko/CourseraSaveAssist/wiki/%D0%97%D0%B0%D0%B2%D0%B0%D0%BD%D1%82%D0%B0%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F)
-- Mozilla Firefox Addons Web Store  [![Static Badge](https://img.shields.io/badge/Mozilla%20Firefox%20Addons%20Web%20Store_-v3.0.0-blue)](https://github.com/lexsysko/CourseraSaveAssist/wiki/%D0%97%D0%B0%D0%B2%D0%B0%D0%BD%D1%82%D0%B0%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F)
+- Microsoft Edge Web Store  [![Static Badge](https://img.shields.io/badge/microsoft%20web%20store_-v3.0.0-blue)](https://github.com/lexsysko/CourseraSaveAssist/wiki/%D0%97%D0%B0%D0%B2%D0%B0%D0%BD%D1%82%D0%B0%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F)
+- Mozilla Firefox Addons Web Store  [![Static Badge](https://img.shields.io/badge/mozilla%20firefox%20addons%20web%20store_-v3.0.0-blue)](https://github.com/lexsysko/CourseraSaveAssist/wiki/%D0%97%D0%B0%D0%B2%D0%B0%D0%BD%D1%82%D0%B0%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F)
 
 Додаток також було додатково ініційованно до додавання у магазини інших браузерів. Зараз магазини превряють додаток перед публікацією.
 
